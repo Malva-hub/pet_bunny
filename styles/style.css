@@ -1,0 +1,33 @@
+body {
+    margin:0;
+    background-color: lightgoldenrodyellow;
+}
+
+#my-canvas {
+    background-color: darkgray;
+}
+
+
+#my-canvas, #gameover-screen {
+    display:none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+  }
+
+
+  
+#time {
+    background-color: brown;
+}
+
+#score {
+    background-color: chocolate;
+}
+
+
