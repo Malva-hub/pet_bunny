@@ -1,16 +1,16 @@
+
+/*@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100&display=swap');*/
+
 body {
     margin:0;
     background-color: lightgoldenrodyellow;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #my-canvas {
     background-color: darkgray;
 }
 
-
-#my-canvas, #gameover-screen {
-    display:none;
-}
 
 .container {
     display: flex;
@@ -21,13 +21,92 @@ body {
   }
 
 
+#my-canvas, #gameover-screen {
+    display:none;
+}
+
+
   
 #time {
     background-color: brown;
+    border-color: brown;
+    display: none;
+    position:initial;
+
 }
 
 #score {
     background-color: chocolate;
+    border-color: chocolate;
+    display:none;
+    position: initial;
+    
 }
 
+#title-time{
+    position: relative;
+    font-size: 14px;
+    display:none;
+    background-position-x: right;
+}
+
+#title-score{
+    position: relative;
+    font-size: 14px;
+    display:none;
+    background-position-x: left;
+}
+
+.title-game{
+    
+    font-size: 34px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Lucida Sans';
+    color: #FF6347;
+    text-align:center;
+    word-spacing: 8px
+    
+}
+
+#game-screen{
+    display: flex;
+
+}
+
+.p{
+    color: #6d4327;
+    font-family: 'Lucida Sans';
+
+}
+
+#start-btn{
+    border-color: #6d4327;
+    background-color:#FF6347;
+    padding: 15px 15px;
+    font-family: 'Lucida Sans';
+    font-size: 24px;
+    color: #6d4327;
+       
+}
+
+#return-splash{
+    border-color: #6d4327;
+    background-color:#FF6347;
+    padding: 5px 5px;
+    font-family: 'Lucida Sans';
+    font-size: 14px;
+    font: bold;
+    color: #6d4327;
+}
+
+#restart-btn{
+    border-color: #6d4327;
+    background-color:#FF6347;
+    padding: 5px 5px;
+    font-family: 'Lucida Sans';
+    font-size: 14px;
+    font: bold;
+    color: #6d4327;
+}
 
