@@ -5,13 +5,11 @@ class Wolf {
         this.audio = new Audio ()
         this.audio.src = "./sounds/wolf.wav"
         this.audio.volume = 0.2;
-        this.x = 400;
+        this.x = 500;
         this.y = 250;
         this.w = 80;
         this.h = 60;
-        this.directionX = 1;
-        this.directionY = 1;
-        this.speed = 3;
+        this.speed = 2;
     }
 
   
@@ -25,9 +23,12 @@ class Wolf {
 
     wolfMovement = () => {
         
-        //this.audio.play();
+        this.audio.play();
         this.x = this.x - this.speed ;
-        
+        if (this.x < 0){
+        this.x = canvas.width + this.w
+        }
+
         
         
     }

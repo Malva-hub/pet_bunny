@@ -22,7 +22,7 @@ class Food {
     }
 
     foodMovement = () => {
-        this.y = this.y + this.speedCount * this.directionY;
+        this.y = this.y + this.speedCount;
     }
 
 }

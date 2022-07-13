@@ -22,7 +22,7 @@ class Cake {
     }
 
     cakeMovement = () => {
-        this.y = this.y + this.speedCount * this.directionY;
+        this.y = this.y + this.speedCount ;
     }
 
 }
