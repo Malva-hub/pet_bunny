@@ -13,7 +13,7 @@
       <div id="splash-screen" class="container" >
         <img src="./images/bunnyjump.png" width="150" alt="bunny" />
         <h3 class="title-game">Bunny is hungry</h3>
-        <p class="p"><b>Instructions</b></p>
+        <p class="p"><b>INSTRUCTIONS</b></p>
         <p class="p">This bunny is hungry, do you want to help him eat?</p>
         <p class="p">The bunny has to eat apples and carrots you earn 1 point for each food</p>
         <p class="p">If he eats cake you lose 3 points</p>
@@ -22,22 +22,31 @@
         <p class="p">Move the up arrow to go up</p>
         <p class="p">Move the down arrow to go down</p>
         <p class="p">Beware of the wolf!</p>
-        <button id="start-btn">Start!</button>
+   
+
+        <form action="">
+          <p class="p"><b>Name: </b><input type="text">
+        
+          <input id="input-btn" type="submit" value="Save"></p> 
+        </form><b>
+        <button id="start-btn">Start !</button></b>
+        
       </div>
 
       <!-- GAME SCREEN -->
       <div id="game-screen">
         <canvas id="my-canvas" width="600" height="400"></canvas>
-        <h3 id="title-time">Time<button id="time">00:00</button></h3>
+        <h3 id="title-time">Time Seconds<button id="time">0</button></h3>
         <h3 id="title-score">Score<button id="score">0</button></h3>
       </div>
 
       <!-- GAME OVER SCREEN -->
       <div id="gameover-screen" class="container">
         <h3 class="title-game">Game Over</h3>
-        <img src="./images/bunnysad.png" width="200" alt="bunnysad" />
-        <button id="restart-btn">Play Again!</button>
-        <button id="return-splash">Return</button>
+        <img id="bunny-game-over-bad" src="./images/bunnysad.png" width="200" alt="bunnysad" />
+        <img id="bunny-game-over-good" src="./images/bunny2.png" width="200" alt="bunny2" />
+        <b><button id="restart-btn">Play Again !</button>
+        <button id="return-splash">Return</button></b>
       </div>
     </div>
 

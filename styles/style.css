@@ -1,10 +1,11 @@
 
-/*@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100&family=Arima&family=Indie+Flower&family=Rubik+Moonrocks&display=swap');
 
 body {
     margin:0;
     background-color: lightgoldenrodyellow;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arima, Arial, Helvetica, sans-serif;
 }
 
 #my-canvas {
@@ -25,25 +26,40 @@ body {
     display:none;
 }
 
+#bunny-game-over, #bunny-game-over2{
+    display:none;
+}
+
 
   
 #time {
-    background-color: brown;
-    border-color: brown;
+    background-color:#FF6347;
+    border-color: #6d4327;
+    padding: 5px 5px;
+    font-family: 'Arima';
+    font-size: 14px;
+    font: bold;
+    color: #6d4327;
     display: none;
     position:initial;
 
 }
 
 #score {
-    background-color: chocolate;
-    border-color: chocolate;
-    display:none;
-    position: initial;
+    background-color:#FF6347;
+    border-color: #6d4327;
+    padding: 5px 5px;
+    font-family: 'Arima';
+    font-size: 14px;
+    font: bold;
+    color: #6d4327;
+    display: none;
+    position:initial;
     
 }
 
 #title-time{
+    color: #6d4327;
     position: relative;
     font-size: 14px;
     display:none;
@@ -51,6 +67,7 @@ body {
 }
 
 #title-score{
+    color: #6d4327;
     position: relative;
     font-size: 14px;
     display:none;
@@ -62,7 +79,7 @@ body {
     font-size: 34px;
     font-weight: bold;
     font-style: italic;
-    font-family: 'Lucida Sans';
+    font-family: 'Indie Flower';
     color: #FF6347;
     text-align:center;
     word-spacing: 8px
@@ -76,7 +93,7 @@ body {
 
 .p{
     color: #6d4327;
-    font-family: 'Lucida Sans';
+    font-family: 'Arima';
 
 }
 
@@ -84,29 +101,42 @@ body {
     border-color: #6d4327;
     background-color:#FF6347;
     padding: 15px 15px;
-    font-family: 'Lucida Sans';
+    font-family: 'Indie Flower';
     font-size: 24px;
     color: #6d4327;
+    border-radius: 15px;
+    font-weight: bold;
        
 }
 
 #return-splash{
     border-color: #6d4327;
     background-color:#FF6347;
-    padding: 5px 5px;
-    font-family: 'Lucida Sans';
-    font-size: 14px;
-    font: bold;
+    padding: 15px 15px;
+    font-family: 'Indie Flower';
+    font-size: 24px;
+    font-weight: bold;
     color: #6d4327;
+    border-radius: 15px;
 }
 
 #restart-btn{
     border-color: #6d4327;
     background-color:#FF6347;
+    padding: 15px 15px;
+    font-family: 'Indie Flower';
+    font-size: 24px;
+    font-weight: bold;
+    color: #6d4327;
+    border-radius: 15px;
+}
+
+#input-btn{
+    border-color: #6d4327;
+    background-color:#FF6347;
     padding: 5px 5px;
     font-family: 'Lucida Sans';
     font-size: 14px;
-    font: bold;
     color: #6d4327;
+    border-radius: 5px;
 }
-

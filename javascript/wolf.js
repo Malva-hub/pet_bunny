@@ -23,11 +23,11 @@ class Wolf {
 
     wolfMovement = () => {
         
-        this.audio.play();
+        //this.audio.play();
         this.x = this.x - this.speed ;
-        if (this.x < 0){
+        /*if (this.x < 0){
         this.x = canvas.width + this.w
-        }
+        }*/
 
         
         

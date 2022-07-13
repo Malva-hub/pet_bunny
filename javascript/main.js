@@ -9,26 +9,6 @@ let game;
 let counter;
  
 
-/*
-
-MAIN:
-const audio = new Audio("./Audio/")
-
-FUNCIONES START
-
-audio.play();
- audio.loop = true;
- (audio.volumen = 0), 5;
-
-
-GAME
-
-GOMEOVERCOLLISION
-
-audio.pause();
-
-*/
-
 
 //ELEMENTOS DE DOM
 const splasScreenDOM = document.querySelector("#splash-screen")
@@ -40,14 +20,17 @@ const scoreDOM = document.querySelector("#score")
 const returnDOM = document.querySelector("#return-splash")
 const titleTimeDOM = document.querySelector("#title-time")
 const titlteScoreDOM = document.querySelector("#title-score")
-
+const bunnyGameBadDOM = document.querySelector("#bunny-game-over-bad")
+const bunnyGameGoodDOM = document.querySelector("#bunny-game-over-good")
 
 //* STATE MANAGEMENT FUNCTIONS
 
 const startGame = () => {
-    console.log("juego andando")
+
+  
     splasScreenDOM.style.display = "none"
     gameoverScreenDOM.style.display = "none"
+
     canvas.style.display = "block"
 
     timeBtn.style.display = "inline"
@@ -55,18 +38,20 @@ const startGame = () => {
     titleTimeDOM.style.display= "inline"
     titlteScoreDOM.style.display= "inline"
 
+
+    scoreDOM.innerText = 0;
+    timeBtn.innerText = 0;
+    
+
     
     
-    //todo PTE REVISAR
-      
-    /*
-    setInterval(speedFood, 2000)*/
+    
 
 
     game= new Game()
 
     game.gameLoop()
-
+    
    
 
 
