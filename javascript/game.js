@@ -39,7 +39,7 @@ class Game {
     this.isGameOn = false;
     canvas.style.display = "none";
     gameoverScreenDOM.style.display = "flex";
-    
+
     
     if (this.wolfBunnyCollision1 === true && this.counter >=20) {
       this.scoreDOM.innerText = this.counter;
@@ -132,16 +132,17 @@ class Game {
       );
       this.foodArr.push(newFoodCarrot);
 
-      let randomPosition2 = Math.random() * canvas.width;
+      let randomPosition2 = Math.random() * canvas.width - 20;
 
-      if (
+      /*if (
         randomPosition2 > randomPosition1 ||
         (randomPosition &&
           randomPosition2 < randomPosition1 + newFoodCarrot.w) ||
         randomPosition + newFoodApple
       ) {
-        randomPosition2 = randomPosition2 + newFoodCarrot.w + newFoodApple.w;
-      }
+    
+        //randomPosition2 = randomPosition2 + newFoodCarrot.w + newFoodApple.w;
+      }*/
 
       let newAddCake = new Cake(randomPosition2, speedCounter);
       this.cakeArr.push(newAddCake);
