@@ -6,7 +6,7 @@ class Bunny {
     this.y = 240;
     this.w = 50;
     this.h = 75;
-    this.speed = 10;
+    this.speed = 5;
     this.directionX = 1;
     this.directionY = 1;
   }

@@ -61,13 +61,13 @@ class Game {
   };
 
   speedFood = () => {
-    if (this.framesCounter % 600 === 0) {
+    if (this.framesCounter % 600 === 0 && this.speedCounter < 10) {
       this.speedCounter += 1;
       this.foodArr.forEach((eachFood) => {
-        eachFood.speedCount += 2;
+        eachFood.speedCount += 1;
       });
       this.cakeArr.forEach((eachCake) => {
-        eachCake.speedCount += 2;
+        eachCake.speedCount += 1;
       });
     }
   };
@@ -136,9 +136,9 @@ class Game {
         randomPosition + newFoodApple
       ) {
     
-        //randomPosition2 = randomPosition2 + newFoodCarrot.w + newFoodApple.w;
+        randomPosition2 = randomPosition2 + newFoodCarrot.w + newFoodApple.w;
       }*/
-
+      randomPosition2 = randomPosition2 + newFoodApple.w;
       let newAddCake = new Cake(randomPosition2, speedCounter);
       this.cakeArr.push(newAddCake);
     }
@@ -196,9 +196,10 @@ class Game {
   };
 
   bunnyAdd = () => {
-    if (this.framesCounter % 650 === 0) {
-      this.bunny.speed += 2;
+    if (this.framesCounter % 10 === 0 && this.bunny.speed < 20) {
+      this.bunny.speed = this.bunny.speed + 1;
     }
+      
   };
 
   wolfBunnyCollision = () => {

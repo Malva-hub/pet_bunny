@@ -71,16 +71,12 @@ returnDOM.addEventListener("click", returnGame);
 
 window.addEventListener("keydown", (event) => {
   if (event.code === "ArrowLeft") {
-    //game.bunny.directionX = -1;
     game.bunny.x = game.bunny.x - game.bunny.speed;
   } else if (event.code === "ArrowRight") {
-    //game.bunny.directionX = 1;
     game.bunny.x = game.bunny.x + game.bunny.speed;
   } else if (event.code === "ArrowUp") {
-    //game.bunny.directionY = 1;
     game.bunny.y = game.bunny.y - game.bunny.speed;
   } else if (event.code === "ArrowDown") {
-    //game.bunny.directionY = -1;
     game.bunny.y = game.bunny.y + game.bunny.speed;
   }
 });
