@@ -22,8 +22,14 @@ body {
   }
 
 
-#my-canvas, #gameover-screen {
+#my-canvas{
     display:none;
+}
+ 
+
+#gameover-screen {
+    display:none;
+    flex-direction:column;
 }
 
 #bunny-game-over, #bunny-game-over2{
@@ -88,7 +94,7 @@ body {
 
 #game-screen{
     display: flex;
-
+    flex-direction: column;
 }
 
 .p{

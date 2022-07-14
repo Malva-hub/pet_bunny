@@ -25,9 +25,10 @@
    
 
         <form action="">
-          <p class="p"><b>Name: </b><input type="text">
+          <p class="p"><b>Name: </b>
+          <input id="input-btn" type="text">
         
-          <input id="input-btn" type="submit" value="Save"></p> 
+          <input  type="submit" value="Save"></p> 
         </form><b>
         <button id="start-btn">Start !</button></b>
         
@@ -36,6 +37,7 @@
       <!-- GAME SCREEN -->
       <div id="game-screen">
         <canvas id="my-canvas" width="600" height="400"></canvas>
+        <h3 id="user"></h3>
         <h3 id="title-time">Time Seconds<button id="time">0</button></h3>
         <h3 id="title-score">Score<button id="score">0</button></h3>
       </div>
@@ -43,6 +45,7 @@
       <!-- GAME OVER SCREEN -->
       <div id="gameover-screen" class="container">
         <h3 class="title-game">Game Over</h3>
+        <h3 id="user"></h3>
         <img id="bunny-game-over-bad" src="./images/bunnysad.png" width="200" alt="bunnysad" />
         <img id="bunny-game-over-good" src="./images/bunny2.png" width="200" alt="bunny2" />
         <b><button id="restart-btn">Play Again !</button>

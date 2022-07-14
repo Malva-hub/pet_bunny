@@ -21,6 +21,8 @@ class Game {
 
     this.timeBtn = document.querySelector("#time");
 
+    
+
     this.time = 0;
 
     this.gameStarted = true;
@@ -38,14 +40,12 @@ class Game {
       this.timeBtn.innerText = Math.round(this.time);
       //audio.pause();
       if (this.counter >= 20) {
-        //todo AQUI QUIERO QUE ME CAMBIE LA IMAGEN DE GAME OVER
         bunnyGameGoodDOM.style.display = "flex";
         bunnyGameBadDOM.style.display = "none";
-      }      
-      
+      }
     } else {
-        bunnyGameBadDOM.style.display = "flex";
-        bunnyGameGoodDOM.style.display = "none";
+      bunnyGameBadDOM.style.display = "flex";
+      bunnyGameGoodDOM.style.display = "none";
       this.counter = 0;
       this.scoreDOM.innerText = this.counter;
       this.timeBtn.innerText = Math.round(this.time);
@@ -145,9 +145,7 @@ class Game {
         eachFood.h + eachFood.y > this.bunny.y
       ) {
         eachFood.audio.play();
-        // .splice(index, qty)
         this.foodArr.splice(index, 1);
-        console.log("has ganado un punto");
         this.counter += 1;
         this.scoreDOM.innerText = this.counter;
         this.gameStarted = false;
@@ -169,7 +167,6 @@ class Game {
       ) {
         eachCake.audio.play();
         this.cakeArr.splice(index, 1);
-        console.log("has perdido un punto");
         this.counter -= 5;
         this.scoreDOM.innerText = this.counter;
         this.gameStarted = false;
@@ -180,32 +177,40 @@ class Game {
     });
   };
 
-  //todo NO APARECE PASADO EL TIEMPO SI NO QUE ES DIBUJADO AL PRINCIPIO
+  
 
   wolfAdd = () => {
     if (this.framesCounter % 650 === 0) {
-        console.log("lobo aparece")
       this.wolf = new Wolf();
+      this.wolf.audio.play()
+    }
+  };
+
+  bunnyAdd = () => {
+    if (this.framesCounter % 650 === 0) {
+       this.bunny.speed += 2;
     }
   };
 
   wolfBunnyCollision = () => {
-    if ( 
-        this.wolf !== undefined && 
+    if (
+      this.wolf !== undefined &&
       this.wolf.x < this.bunny.x + this.bunny.w &&
       this.wolf.x + this.wolf.w > this.bunny.x &&
       this.wolf.y < this.bunny.y + this.bunny.h &&
-      this.wolf.h + this.wolf.y > this.bunny.y 
+      this.wolf.h + this.wolf.y > this.bunny.y
     ) {
       this.wolfBunnyCollision1 = true;
       this.gameOver();
     }
   };
 
-  //todo como puedo poner formato 00:00 MM:SS
+  
   timerGame = () => {
     this.timeBtn.innerText = Math.round(this.time);
   };
+
+  
 
   gameLoop = () => {
     this.time += 1 / 60;
@@ -232,10 +237,10 @@ class Game {
     this.framesCounter++;
     this.speedFood();
     this.wolfAdd();
-    if(this.wolf !== undefined){
-        this.wolf.wolfMovement();
+    if (this.wolf !== undefined) {
+      this.wolf.wolfMovement();
     }
-    
+
     this.wolfBunnyCollision();
 
     //dibujar los elementos
@@ -247,12 +252,10 @@ class Game {
     this.cakeArr.forEach((eachCake) => {
       eachCake.drawCake();
     });
-    
-    if(this.wolf !== undefined){
-        this.wolf.drawWolf();
+
+    if (this.wolf !== undefined) {
+      this.wolf.drawWolf();
     }
-    
-    
 
     //efecto recursion
     if (this.isGameOn === true) {

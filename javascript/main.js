@@ -7,6 +7,8 @@ const ctx = canvas.getContext("2d")
 
 let game;
 let counter;
+let username;
+
  
 
 
@@ -22,6 +24,8 @@ const titleTimeDOM = document.querySelector("#title-time")
 const titlteScoreDOM = document.querySelector("#title-score")
 const bunnyGameBadDOM = document.querySelector("#bunny-game-over-bad")
 const bunnyGameGoodDOM = document.querySelector("#bunny-game-over-good")
+const userNameDOM = document.querySelector("#user")
+const inputBtnDOM = document.querySelector("#input-btn")
 
 //* STATE MANAGEMENT FUNCTIONS
 
@@ -38,7 +42,10 @@ const startGame = () => {
     titleTimeDOM.style.display= "inline"
     titlteScoreDOM.style.display= "inline"
 
+    inputBtnDOM.innerText = userNameDOM.innerText
+    userNameDOM.style.display = "inline"
 
+    //todo FALTA LIMPIAR EL INPUT
     scoreDOM.innerText = 0;
     timeBtn.innerText = 0;
     
