@@ -41,26 +41,28 @@ body {
 #time {
     background-color:#FF6347;
     border-color: #6d4327;
-    padding: 5px 5px;
+    padding: 5px 10px;
     font-family: 'Arima';
     font-size: 14px;
     font: bold;
     color: #6d4327;
     display: none;
     position:initial;
+    border-radius: 10px;
 
 }
 
 #score {
     background-color:#FF6347;
     border-color: #6d4327;
-    padding: 5px 5px;
+    padding: 5px 10px;
     font-family: 'Arima';
     font-size: 14px;
     font: bold;
     color: #6d4327;
     display: none;
     position:initial;
+    border-radius: 10px;
     
 }
 

@@ -25,13 +25,13 @@ const titlteScoreDOM = document.querySelector("#title-score")
 const bunnyGameBadDOM = document.querySelector("#bunny-game-over-bad")
 const bunnyGameGoodDOM = document.querySelector("#bunny-game-over-good")
 const userNameDOM = document.querySelector("#user")
-const inputBtnDOM = document.querySelector("#input-btn")
+const inputBtnDOM = document.getElementById("#input-btn")
 
 //* STATE MANAGEMENT FUNCTIONS
 
 const startGame = () => {
 
-  
+     
     splasScreenDOM.style.display = "none"
     gameoverScreenDOM.style.display = "none"
 
@@ -42,13 +42,13 @@ const startGame = () => {
     titleTimeDOM.style.display= "inline"
     titlteScoreDOM.style.display= "inline"
 
-    inputBtnDOM.innerText = userNameDOM.innerText
+    //inputBtnDOM.innerText = userNameDOM.innerText
     userNameDOM.style.display = "inline"
 
-    //todo FALTA LIMPIAR EL INPUT
+    
     scoreDOM.innerText = 0;
     timeBtn.innerText = 0;
-    
+    //inputBtnDOM.value = ""; 
 
     
     
