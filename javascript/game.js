@@ -242,6 +242,7 @@ class Game {
     }
 
     this.wolfBunnyCollision();
+    this.bunnyAdd()
 
     //dibujar los elementos
     ctx.drawImage(this.bg, 0, 0, canvas.clientWidth, canvas.height);
