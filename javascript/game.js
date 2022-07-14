@@ -21,13 +21,13 @@ class Game {
 
     this.timeBtn = document.querySelector("#time");
 
-    this.soundbg = new Audio ()
+    this.time = 0;
 
-    this.soundbg.src = "./sounds/bgsong.mp3"
+    this.soundbg = new Audio();
+
+    this.soundbg.src = "./sounds/bgsong.mp3";
 
     this.soundbg.volume = 0.2;
-
-    this.time = 0;
 
     this.gameStarted = true;
 
@@ -40,23 +40,18 @@ class Game {
     canvas.style.display = "none";
     gameoverScreenDOM.style.display = "flex";
 
-    
-    if (this.wolfBunnyCollision1 === true && this.counter >=20) {
+    if (this.wolfBunnyCollision1 === true && this.counter >= 20) {
       this.scoreDOM.innerText = this.counter;
       this.timeBtn.innerText = Math.round(this.time);
 
-        bunnyGameGoodDOM.style.display = "flex";
-        bunnyGameBadDOM.style.display = "none";
-      
-    }else if(this.wolfBunnyCollision1 === true && this.counter < 20){
-          
+      bunnyGameGoodDOM.style.display = "flex";
+      bunnyGameBadDOM.style.display = "none";
+    } else if (this.wolfBunnyCollision1 === true && this.counter < 20) {
       this.scoreDOM.innerText = this.counter;
       this.timeBtn.innerText = Math.round(this.time);
       bunnyGameBadDOM.style.display = "flex";
       bunnyGameGoodDOM.style.display = "none";
-      
-    }else {
-      
+    } else {
       this.counter = 0;
       this.scoreDOM.innerText = this.counter;
       this.timeBtn.innerText = Math.round(this.time);
@@ -166,7 +161,7 @@ class Game {
       if (this.counter >= 20) {
         this.bunny.w = 75;
         this.bunny.h = 100;
-      }else if (this.counter < 20){
+      } else if (this.counter < 20) {
         this.bunny.w = 50;
         this.bunny.h = 75;
       }
@@ -193,18 +188,16 @@ class Game {
     });
   };
 
-  
-
   wolfAdd = () => {
     if (this.framesCounter % 650 === 0) {
       this.wolf = new Wolf();
-      this.wolf.audio.play()
+      this.wolf.audio.play();
     }
   };
 
   bunnyAdd = () => {
     if (this.framesCounter % 650 === 0) {
-       this.bunny.speed += 2;
+      this.bunny.speed += 2;
     }
   };
 
@@ -221,7 +214,6 @@ class Game {
     }
   };
 
-  
   timerGame = () => {
     this.timeBtn.innerText = Math.round(this.time);
   };
@@ -241,7 +233,7 @@ class Game {
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
 
     //movimientos y acciones
-    this.soundbg.play ()
+    this.soundbg.play();
     this.timerGame();
     this.bunnyCollision();
 
@@ -265,8 +257,7 @@ class Game {
     }
 
     this.wolfBunnyCollision();
-    this.bunnyAdd()
-    
+    this.bunnyAdd();
 
     //dibujar los elementos
     ctx.drawImage(this.bg, 0, 0, canvas.clientWidth, canvas.height);

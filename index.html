@@ -8,47 +8,79 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container1">
       <!-- SPLASH SCREEN -->
-      <div id="splash-screen" class="container" >
-        <img src="./images/bunnyjump.png" width="150" alt="bunny" />
-        <h3 class="title-game">Bunny is hungry</h3>
-        <p class="p"><b>INSTRUCTIONS</b></p>
-        <p class="p">This bunny is hungry, do you want to help him eat?</p>
-        <p class="p">The bunny has to eat apples and carrots you earn 1 point for each food</p>
-        <p class="p">If he eats cake you lose 3 points</p>
-        <p class="p">Move the right arrow to go right</p>
-        <p class="p">Move the left arrow to go left</p>
-        <p class="p">Move the up arrow to go up</p>
-        <p class="p">Move the down arrow to go down</p>
-        <p class="p">Beware of the wolf!</p>
-   
-
-        <form action="">
-          <p class="p"><b>Name: </b>
-          <input id="input-name" type="text" value="">
-        </p> 
-        </form><b>
-        <button id="start-btn">Start !</button></b>
-        
+      <div id="splas-div">
+        <div id="splash-screen" class="container">
+          <div id="img-splash">
+            <img src="./images/bunnyjump.png" width="150" alt="bunny" />
+          </div>
+          <h3 class="title-game">Bunny is hungry</h3>
+          <div id="text">
+            <p class="p"><b>INSTRUCTIONS</b></p>
+            <p class="p">This bunny is hungry, do you want to help him eat?</p>
+            <p class="p">
+              The bunny has to eat Apples and Carrots you earn 1 point for each
+            </p>
+            <p class="p">If he eats Cake you lose 3 points</p>
+            <p class="p">Move the Right Arrow to go Right</p>
+            <p class="p">Move the Left Arrow to go Left</p>
+            <p class="p">Move the Up Arrow to go Up</p>
+            <p class="p">Move the Down Arrow to go Down</p>
+            <p class="p">Beware of the Wolf!</p>
+          </div>
+          <b
+            ><b>
+              <form action="">
+                <p class="p">
+                  <b>Name: </b>
+                  <input id="input-name" type="text" value="" />
+                </p></form></b
+          ></b>
+          <b
+            ><b
+              ><b> <button id="start-btn">Start !</button></b></b
+            ></b
+          >
+        </div>
       </div>
 
       <!-- GAME SCREEN -->
       <div id="game-screen">
         <canvas id="my-canvas" width="600" height="400"></canvas>
-        <h3 id="user"></h3>
-        <h3 id="title-time">Time Seconds<button id="time">0</button></h3>
-        <h3 id="title-score">Score<button id="score">0</button></h3>
+        <div id="game-canvas">
+          <h3 id="title-time">Time Seconds <button id="time">0</button></h3>
+          <h3 id="user"></h3>
+          <h3 id="title-score">Score <button id="score">0</button></h3>
+        </div>
       </div>
 
       <!-- GAME OVER SCREEN -->
-      <div id="gameover-screen" class="container">
-        <h3 class="title-game">Game Over</h3>
-        <h3 id="user"></h3>
-        <img id="bunny-game-over-bad" src="./images/bunnysad.png" width="200" alt="bunnysad" />
-        <img id="bunny-game-over-good" src="./images/bunny2.png" width="200" alt="bunny2" />
-        <b><button id="restart-btn">Play Again !</button>
-        <button id="return-splash">Return</button></b>
+      <div id="gameover-screen">
+        <div id="gameover-game">
+          <h3 class="title-game-over">Game Over</h3>
+          <h3 id="user"></h3>
+          <div id="game-over-div">
+            <img
+              id="bunny-game-over-bad"
+              src="./images/bunnysad.png"
+              width="240"
+              alt="bunnysad"
+            />
+            <img
+              id="bunny-game-over-good"
+              src="./images/bunny2.png"
+              width="240"
+              alt="bunny2"
+            />
+            <div id="btn-game-over">
+              <b
+                ><button id="restart-btn">Play Again !</button>
+                <button id="return-splash">Return</button></b
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -58,7 +90,5 @@
     <script src="./javascript/food.js"></script>
     <script src="./javascript/cake.js"></script>
     <script src="./javascript/wolf.js"></script>
-   
-    
   </body>
 </html>

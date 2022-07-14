@@ -11,13 +11,8 @@ class Bunny {
     this.directionY = 1;
   }
 
-  //metodos 
+  //metodos
   drawBunny = () => {
-    ctx.drawImage(this.image,this.x,this.y,this.w,this.h)
-  }
-
-
-
-
-
+    ctx.drawImage(this.image, this.x, this.y, this.w, this.h);
+  };
 }
