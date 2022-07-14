@@ -38,8 +38,9 @@ class Game {
     this.soundbg.volume = 0;
     this.isGameOn = false;
     canvas.style.display = "none";
-
     gameoverScreenDOM.style.display = "flex";
+    
+    
     if (this.wolfBunnyCollision1 === true && this.counter >=20) {
       this.scoreDOM.innerText = this.counter;
       this.timeBtn.innerText = Math.round(this.time);
@@ -224,6 +225,13 @@ class Game {
     this.timeBtn.innerText = Math.round(this.time);
   };
 
+  /*userName = () => {
+      
+
+
+
+
+  }*/
 
   gameLoop = () => {
     this.time += 1 / 60;

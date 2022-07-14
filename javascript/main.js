@@ -7,7 +7,7 @@ const ctx = canvas.getContext("2d")
 
 let game;
 let counter;
-let username;
+let username = "";
 
  
 
@@ -25,13 +25,17 @@ const titlteScoreDOM = document.querySelector("#title-score")
 const bunnyGameBadDOM = document.querySelector("#bunny-game-over-bad")
 const bunnyGameGoodDOM = document.querySelector("#bunny-game-over-good")
 const userNameDOM = document.querySelector("#user")
-const inputBtnDOM = document.getElementById("#input-btn")
+const inputNameDOM = document.querySelector("#input-name")
 
 //* STATE MANAGEMENT FUNCTIONS
 
+
+
+
+
 const startGame = () => {
 
-     
+    
     splasScreenDOM.style.display = "none"
     gameoverScreenDOM.style.display = "none"
 
@@ -41,14 +45,20 @@ const startGame = () => {
     scoreDOM.style.display= "inline"
     titleTimeDOM.style.display= "inline"
     titlteScoreDOM.style.display= "inline"
-
-    //inputBtnDOM.innerText = userNameDOM.innerText
-    userNameDOM.style.display = "inline"
+    
+    
+      username = inputNameDOM.value;
+      userNameDOM.innerText = username
+      
+      inputNameDOM.value = ""; 
+    
+      userNameDOM.style.display="none" 
+    
 
     
     scoreDOM.innerText = 0;
     timeBtn.innerText = 0;
-    //inputBtnDOM.value = ""; 
+    
 
     
     
@@ -92,16 +102,16 @@ returnDOM.addEventListener("click", returnGame);
 
 window.addEventListener("keydown", (event) => {
   if (event.code === "ArrowLeft"){
-      game.bunny.directionX = -1;
+      //game.bunny.directionX = -1;
       game.bunny.x = game.bunny.x - game.bunny.speed
   }else if (event.code === "ArrowRight"){
-      game.bunny.directionX = 1;
+      //game.bunny.directionX = 1;
       game.bunny.x = game.bunny.x + game.bunny.speed
   }else if (event.code === "ArrowUp"){
-      game.bunny.directionY = 1;
+      //game.bunny.directionY = 1;
       game.bunny.y = game.bunny.y - game.bunny.speed
   }else if (event.code === "ArrowDown"){
-    game.bunny.directionY = -1;
+    //game.bunny.directionY = -1;
     game.bunny.y= game.bunny.y + game.bunny.speed
   }
 })
