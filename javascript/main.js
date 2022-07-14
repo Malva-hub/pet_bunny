@@ -52,7 +52,7 @@ const startGame = () => {
       
       inputNameDOM.value = ""; 
     
-      //userNameDOM.style.display="none" 
+      userNameDOM.style.display="none" 
     
 
     
