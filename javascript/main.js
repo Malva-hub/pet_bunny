@@ -45,14 +45,19 @@ const startGame = () => {
     scoreDOM.style.display= "inline"
     titleTimeDOM.style.display= "inline"
     titlteScoreDOM.style.display= "inline"
-    
+      
     
       username = inputNameDOM.value;
+
+
       userNameDOM.innerText = username
+       
+      
+      //userNameDOM.style.display="none"
       
       inputNameDOM.value = ""; 
     
-      userNameDOM.style.display="none" 
+      
     
 
     
