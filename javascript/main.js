@@ -1,15 +1,10 @@
-//* GLOBAL VARIABLES
-
 const canvas = document.querySelector("#my-canvas");
 const ctx = canvas.getContext("2d");
-
-// VARIABLES GLOBALES
 
 let game;
 let counter;
 let username = "";
 
-//ELEMENTOS DE DOM
 const splasScreenDOM = document.querySelector("#splas-div");
 const startBtn = document.querySelector("#start-btn");
 const gameoverScreenDOM = document.querySelector("#gameover-screen");
@@ -23,8 +18,6 @@ const bunnyGameBadDOM = document.querySelector("#bunny-game-over-bad");
 const bunnyGameGoodDOM = document.querySelector("#bunny-game-over-good");
 const userNameDOM = document.querySelector("#user");
 const inputNameDOM = document.querySelector("#input-name");
-
-//* STATE MANAGEMENT FUNCTIONS
 
 const startGame = () => {
   splasScreenDOM.style.display = "none";
@@ -40,8 +33,6 @@ const startGame = () => {
   username = inputNameDOM.value;
 
   userNameDOM.innerText = username;
-
-  //userNameDOM.style.display="none"
 
   inputNameDOM.value = "";
 
@@ -62,8 +53,6 @@ const returnGame = () => {
   titlteScoreDOM.style.display = "none";
   splasScreenDOM.style.display = "flex";
 };
-
-//* ADD EVENT LISTENERS
 
 startBtn.addEventListener("click", startGame);
 restartBtn.addEventListener("click", startGame);

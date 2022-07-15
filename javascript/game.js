@@ -27,7 +27,7 @@ class Game {
 
     this.soundbg.src = "./sounds/bgsong.mp3";
 
-    this.soundbg.volume = 0.2;
+    this.soundbg.volume = 0.1;
 
     this.gameStarted = true;
 
@@ -129,15 +129,6 @@ class Game {
 
       let randomPosition2 = Math.random() * canvas.width - 20;
 
-      /*if (
-        randomPosition2 > randomPosition1 ||
-        (randomPosition &&
-          randomPosition2 < randomPosition1 + newFoodCarrot.w) ||
-        randomPosition + newFoodApple
-      ) {
-    
-        randomPosition2 = randomPosition2 + newFoodCarrot.w + newFoodApple.w;
-      }*/
       randomPosition2 = randomPosition2 + newFoodApple.w;
       let newAddCake = new Cake(randomPosition2, speedCounter);
       this.cakeArr.push(newAddCake);
@@ -199,7 +190,6 @@ class Game {
     if (this.framesCounter % 10 === 0 && this.bunny.speed < 20) {
       this.bunny.speed = this.bunny.speed + 1;
     }
-      
   };
 
   wolfBunnyCollision = () => {
@@ -219,21 +209,11 @@ class Game {
     this.timeBtn.innerText = Math.round(this.time);
   };
 
-  /*userName = () => {
-      
-
-
-
-
-  }*/
-
   gameLoop = () => {
     this.time += 1 / 60;
 
-    //limpiar el canva
     ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
 
-    //movimientos y acciones
     this.soundbg.play();
     this.timerGame();
     this.bunnyCollision();
@@ -260,7 +240,6 @@ class Game {
     this.wolfBunnyCollision();
     this.bunnyAdd();
 
-    //dibujar los elementos
     ctx.drawImage(this.bg, 0, 0, canvas.clientWidth, canvas.height);
     this.bunny.drawBunny();
     this.foodArr.forEach((eachFood) => {
@@ -274,7 +253,6 @@ class Game {
       this.wolf.drawWolf();
     }
 
-    //efecto recursion
     if (this.isGameOn === true) {
       requestAnimationFrame(this.gameLoop);
     }

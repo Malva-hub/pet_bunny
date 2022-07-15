@@ -4,13 +4,11 @@ class Cake {
     this.image.src = "./images/cake.png";
     this.audio = new Audio();
     this.audio.src = "./sounds/no.mp3";
-    this.audio.volume = 0.2;
+    this.audio.volume = 0.1;
     this.x = xParam;
     this.y = 0;
     this.w = 40;
     this.h = 40;
-    this.directionX = 1;
-    this.directionY = 1;
     this.speedCount = speedCount;
   }
 

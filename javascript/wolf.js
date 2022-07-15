@@ -4,7 +4,7 @@ class Wolf {
     this.image.src = "./images/wolf.png";
     this.audio = new Audio();
     this.audio.src = "./sounds/wolf.wav";
-    this.audio.volume = 0.2;
+    this.audio.volume = 0.1;
     this.x = 500;
     this.y = 250;
     this.w = 80;
@@ -17,10 +17,6 @@ class Wolf {
   };
 
   wolfMovement = () => {
-    //this.audio.play();
     this.x = this.x - this.speed;
-    /*if (this.x < 0){
-        this.x = canvas.width + this.w
-        }*/
   };
 }
